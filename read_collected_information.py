@@ -12,15 +12,21 @@ while True:
             break
 
     with open("collected_informations.txt", "r") as file:
-        lines = file.readlines()
+        content = file.read()
 
-        for line in lines:
-            print(line.strip())
-        
+        personal_informations = content.split("=" * 40)
+        found = False   
 
-            
-#open the text file created from the previous program and read its contents
-
-    #using for loop, display informations about the person the user searched for
+        for person in personal_informations:
+            if (f"Name: {name_search}") in person:
+                found = True
+                print(f"\nInformation found for {name_search}:") 
+                print("=" * 40)
+                print(person.strip())
+                print("=" * 40)
+               
+        if not found:
+            print(f"\n No information is found for {name_search}. Please check the name and try again.")
+    
     #if the name was not found:    
         #print that the person the user was looking for was not found
