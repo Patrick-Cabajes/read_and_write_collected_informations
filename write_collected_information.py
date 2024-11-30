@@ -19,10 +19,10 @@ while True:
         age = input(f"Please input the age of {full_name}: ")
 
         if not age.isdigit():
-            print("Invalid Input: Please input numbers only")
+            print("Invalid Input: Please input numbers ranging from 0 to 150 only!")
 
         elif int(age) < 0 or int(age) > 150:
-            print("Invalid Input: Please provide a valid number for age between 0 and 150")
+            print("Invalid Input: Please provide a valid number for age between 0 and 150!")
 
         else: 
             break
