@@ -14,11 +14,23 @@ while True:
 
         else:
             break
+    
+    while True:
+        age = input(f"Please input the age of {full_name}: ")
 
-    #ask for more information following the format from the second loop
+        if not age.isdigit():
+            print("Invalid Input: Please input numbers only")
+
+        elif int(age) < 0 or int(age) > 150:
+            print("Invalid Input: Please provide a valid number for age between 0 and 150")
+
+        else: 
+            break
+
     with open("./collected_informations.txt", "a") as info:
         informations = {
             info.write(f'Name: {full_name}\n'),
+            info.write(f'Age: {age}\n')
         }
 
     #ask the user if they would like to input another entry
