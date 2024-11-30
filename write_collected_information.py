@@ -52,7 +52,37 @@ while True:
             break
 
         else:
-            print("Invalid Input! Input 'Single','Married','Divorced, or 'Widowed' only")
+            print("Invalid Input! Input 'Single','Married','Divorced, or 'Widowed' only.")
+    
+    while True:
+        mother_name = input("Please input your mother's name: ")
+        
+        if not mother_name.replace(" ", "").isalpha():
+            print("Invalid Input! Please input letters only.")
+        
+        elif not mother_name.istitle():
+            print("Invalid Input! The first letter in each word should be capitalized, followed by lowercase characters.")
+
+        elif len(mother_name) <3:
+            print("Invalid Input! Please provide a longer name.")
+
+        else:
+            break
+    
+    while True:
+        father_name = input("Please input your father's name: ")
+        
+        if not father_name.replace(" ", "").isalpha():
+            print("Invalid Input! Please input letters only.")
+        
+        elif not father_name.istitle():
+            print("Invalid Input! The first letter in each word should be capitalized, followed by lowercase characters.")
+
+        elif len(father_name) <3:
+            print("Invalid Input! Please provide a longer name.")
+
+        else:
+            break
 
     with open("./collected_informations.txt", "a") as info:
         informations = {
@@ -60,7 +90,9 @@ while True:
             info.write(f'Age: {age}\n'),
             info.write(f'Sex: {sex}\n'),
             info.write(f'Contact Number: {contact_number}\n'),
-            info.write(f'Marital Status: {status}\n')
+            info.write(f'Marital Status: {status}\n'),
+            info.write(f"Mother's Name: {mother_name}\n"),
+            info.write(f"Father's Name: {father_name}\n")
         }
 
     #ask the user if they would like to input another entry
