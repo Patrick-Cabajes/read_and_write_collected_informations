@@ -87,7 +87,8 @@ while True:
                 info.write(f'Contact Number: {contact_number}\n'),
                 info.write(f'Marital Status: {status}\n'),
                 info.write(f"Mother's Name: {mother_name}\n"),
-                info.write(f"Father's Name: {father_name}\n")
+                info.write(f"Father's Name: {father_name}\n"),
+                info.write("=" * 40 + "\n")
             }
 
         while True:
