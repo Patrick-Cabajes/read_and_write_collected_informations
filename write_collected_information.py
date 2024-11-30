@@ -1,12 +1,15 @@
-#declare an empty array
+informations = {}
 #open a text file
 
-#while True:
-    #while True:
-        #ask the user to input their name
-        #add conditions for the input
-            #print error messages if the input is invalid
-        
+while True:
+    while True:
+        full_name = input("Please input your full name: ")
+        if not full_name.isalpha():
+            print("Invalid Input: Please input letter only")
+
+        else:
+            break
+
     #ask for more information following the format from the second loop
 
     #store the information in the array and write the collected data to the text file
